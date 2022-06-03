@@ -1,0 +1,185 @@
+{
+  "smartphones": [
+    {
+      "id": 1,
+      "name": "Iphone 12",
+      "image": "https://avatars.mds.yandex.net/get-mpic/4577446/img_id885624576373755146.jpeg/orig",
+      "price": 70000
+    },
+    {
+      "id": 2,
+      "name": "Iphone 12",
+      "image": "https://avatars.mds.yandex.net/get-mpic/4577446/img_id885624576373755146.jpeg/orig",
+      "price": 70000
+    },
+    {
+      "id": 3,
+      "name": "Iphone 12",
+      "image": "https://avatars.mds.yandex.net/get-mpic/4577446/img_id885624576373755146.jpeg/orig",
+      "price": 70000
+    },
+    {
+      "id": 4,
+      "name": "Iphone 12",
+      "image": "https://avatars.mds.yandex.net/get-mpic/4577446/img_id885624576373755146.jpeg/orig",
+      "price": 70000
+    },
+    {
+      "id": 5,
+      "name": "Iphone 12",
+      "image": "https://avatars.mds.yandex.net/get-mpic/4577446/img_id885624576373755146.jpeg/orig",
+      "price": 70000
+    },
+    {
+      "id": 6,
+      "name": "Iphone 12",
+      "image": "https://avatars.mds.yandex.net/get-mpic/4577446/img_id885624576373755146.jpeg/orig",
+      "price": 70000
+    },
+    {
+      "id": 7,
+      "name": "Iphone 12",
+      "image": "https://avatars.mds.yandex.net/get-mpic/4577446/img_id885624576373755146.jpeg/orig",
+      "price": 70000
+    },
+    {
+      "id": 8,
+      "name": "Iphone 12",
+      "image": "https://avatars.mds.yandex.net/get-mpic/4577446/img_id885624576373755146.jpeg/orig",
+      "price": 70000
+    }
+  ],
+  "headphones": [
+    {
+      "id": 1,
+      "name": "Sony mdrx",
+      "image": "https://avatars.mds.yandex.net/get-mpic/5284139/img_id6580592700167786022.jpeg/orig",
+      "price": 1
+    },
+    {
+      "id": 2,
+      "name": "Sony mdrx",
+      "image": "https://avatars.mds.yandex.net/get-mpic/5284139/img_id6580592700167786022.jpeg/orig",
+      "price": 2
+    },
+    {
+      "id": 3,
+      "name": "Sony mdrx",
+      "image": "https://avatars.mds.yandex.net/get-mpic/5284139/img_id6580592700167786022.jpeg/orig",
+      "price": 3
+    },
+    {
+      "id": 4,
+      "name": "Sony mdrx",
+      "image": "https://avatars.mds.yandex.net/get-mpic/5284139/img_id6580592700167786022.jpeg/orig",
+      "price": 4
+    },
+    {
+      "id": 5,
+      "name": "Sony mdrx",
+      "image": "https://avatars.mds.yandex.net/get-mpic/5284139/img_id6580592700167786022.jpeg/orig",
+      "price": 5
+    },
+    {
+      "id": 6,
+      "name": "Sony mdrx",
+      "image": "https://avatars.mds.yandex.net/get-mpic/5284139/img_id6580592700167786022.jpeg/orig",
+      "price": 6
+    },
+    {
+      "id": 7,
+      "name": "Sony mdrx",
+      "image": "https://avatars.mds.yandex.net/get-mpic/5284139/img_id6580592700167786022.jpeg/orig",
+      "price": 7
+    },
+    {
+      "id": 8,
+      "name": "Sony mdrx",
+      "image": "https://avatars.mds.yandex.net/get-mpic/5284139/img_id6580592700167786022.jpeg/orig",
+      "price": 8
+    }
+  ],
+  "users": [
+    {
+      "email": "dam@gmail.com",
+      "password": "$2a$10$96eNZW7qEQ1ntTSDq5bNX.TL.AaYUTBOF.I2A0vyxsRhb5YH9euCu",
+      "id": 1
+    },
+    {
+      "email": "wa@mail.ru",
+      "password": "$2a$10$HT/xvbe0kr2VYw1O7/Q.nue25UrC1cbr4ESLsTfBKlSKwZEty.XSm",
+      "id": 2
+    },
+    {
+      "email": "oleg21@gmail.com",
+      "password": "$2a$10$arp1WyTmuo7Yi5eVTeADMOOFavwDT14wDPupaEMCKJj2OWBEsvxQO",
+      "id": 3
+    },
+    {
+      "email": "olag21@gmail.com",
+      "password": "$2a$10$aqKzx6BEQjQHkPti4Y9JTua3xF2DqGzo0mRf19x.6HvAtzQC1583K",
+      "username": "oleg",
+      "id": 4
+    },
+    {
+      "email": "oslag21@gmail.com",
+      "password": "$2a$10$Wkh5rGDNQAI.EJpa4UeSE.Hu5gRtRa91JPw7/LwzScAg.g/1uNIRG",
+      "username": "olega",
+      "id": 5
+    },
+    {
+      "email": "oswelag21@gmail.com",
+      "password": "$2a$10$8UciHYo7RDOgBAxgg2zfR.wRm7eik6TeqPCZ.bqxlS3JVTVjAz9N.",
+      "username": "olega",
+      "id": 6
+    },
+    {
+      "email": "oswdelag21@gmail.com",
+      "password": "$2a$10$JN2mSChkKpTxcHuZVZ9aTObldJfxyhWr6LNAEvKC1TbaHsNIJkXq.",
+      "username": "olega",
+      "id": 7
+    },
+    {
+      "email": "oswdaelag21@gmail.com",
+      "password": "$2a$10$gJkYQdFMvUh0E0CWUebk4uQEihEsE10eQ35f.2XxfGIYWAPil8dgS",
+      "username": "olega",
+      "id": 8
+    },
+    {
+      "email": "dw1ad@mail.com",
+      "password": "$2a$10$nITCmqNNruomtcaYtQE.8ex/Z9P1Yxg3xPmRT8CVoVvq20To2ajGG",
+      "username": "eafeq",
+      "id": 9
+    },
+    {
+      "email": "dam12345@mail.ru",
+      "password": "$2a$10$MzPYMvHJ4dgyEwfKsP7MbuLTMlN7Atz5kPe8s9dbGyaTfOQYGlj5y",
+      "username": "dam",
+      "id": 10
+    },
+    {
+      "email": "asfwegf2@gmail.com",
+      "password": "$2a$10$rJk.qw6rtq8o8SUxTffCXetpE95PlgGn07uFwrU18gzBzAJ7W7dLe",
+      "username": "damir",
+      "id": 11
+    },
+    {
+      "email": "asfwdegf2@gmail.com",
+      "password": "$2a$10$YjM7V1zUEpsjkJkFfWDgre38Nz3ZAD/fbvecsK/etaILxCqAFn2ay",
+      "username": "damir",
+      "id": 12
+    },
+    {
+      "email": "ef@mail.com",
+      "password": "$2a$10$Lw0gBOUWt1yaQhoGT2FEl.UY.dexlRHLZ.Lsy2bNIo6.u7Qr/27gi",
+      "username": "ead",
+      "id": 13
+    },
+    {
+      "email": "asdwad@mail.ru",
+      "password": "$2a$10$2cweb7j5yBCRZSqXnaPCKOjtDuhHZdSxSRgcQUSB6/zBbWzPp4X3e",
+      "username": "wefewf",
+      "id": 14
+    }
+  ]
+}
