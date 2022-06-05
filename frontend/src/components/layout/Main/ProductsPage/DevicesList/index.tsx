@@ -1,8 +1,9 @@
 import Preloader from "components/layout/Preloader";
 import { useAppSelector } from "hooks/redux";
+import { FormattedMessage } from "react-intl";
 import Paginate from "../Pagination";
 import ProductCard from "./ProductCard";
-import { NotFoundAlert } from "./style";
+import { NotFoundAlert, ProductCardsContainer } from "./style";
 
 interface DevicesProps {
   setPage: (value: number) => void;
@@ -14,10 +15,11 @@ const Devices: React.FC<DevicesProps> = ({ setPage, page, limit }) => {
   const { data, isLoading, error } = useAppSelector(
     (state) => state.deviceReducer
   );
+
   return (
     <Preloader isLoading={isLoading} error={error}>
       {data.device?.length ? (
-        <div>
+        <ProductCardsContainer>
           {data.device.map((device, i) => (
             <div key={i}>
               <ProductCard
@@ -34,9 +36,11 @@ const Devices: React.FC<DevicesProps> = ({ setPage, page, limit }) => {
             setPage={setPage}
             page={page}
           />
-        </div>
+        </ProductCardsContainer>
       ) : (
-        <NotFoundAlert>Nothing found for your request</NotFoundAlert>
+        <NotFoundAlert>
+          <FormattedMessage id="not_found" />
+        </NotFoundAlert>
       )}
     </Preloader>
   );

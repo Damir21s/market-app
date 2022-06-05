@@ -1,11 +1,12 @@
+import { LanguageContext } from "App";
 import { Images } from "assets/styles/globals";
 import Button from "components/layout/Main/Button";
 import Preloader from "components/layout/Preloader";
 import { useAppDispatch, useAppSelector } from "hooks/redux";
-import { useEffect } from "react";
+import { useContext, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { getOneDevice } from "store/products/product.actions";
-import { onChangeValueCharacterstics } from "utils/onChangeValueCharacterstics";
+import { onChangeLanguage } from "utils/onChangeLanguage";
 import {
   CharactericticsContainer,
   ProductContainer,
@@ -19,12 +20,20 @@ const DevicePage = () => {
 
   const dispatch = useAppDispatch();
 
+  const { currentLanguage } = useContext(LanguageContext);
+
   const { oneDevice, isLoading, error } = useAppSelector(
     (state) => state.deviceReducer
   );
 
-  const { keys, values } = onChangeValueCharacterstics(
-    oneDevice?.characteristics
+  const {
+    selectLangKeysCharacter,
+    selectLangValuesCharacter,
+    selectLangDescriprion,
+  } = onChangeLanguage(
+    currentLanguage,
+    oneDevice?.characteristics,
+    oneDevice?.description
   );
 
   useEffect(() => {
@@ -42,9 +51,15 @@ const DevicePage = () => {
                 <Images wth="20rem" hht="25rem" src={oneDevice.img} />
               </div>
               <div>
-                <ul>{keys && keys.map((key, i) => <li key={i}>{key}</li>)}</ul>
                 <ul>
-                  {values && values.map((value, i) => <li key={i}>{value}</li>)}
+                  {selectLangKeysCharacter.map((key, i) => (
+                    <li key={i}>{key}</li>
+                  ))}
+                </ul>
+                <ul>
+                  {selectLangValuesCharacter.map((value, i) => (
+                    <li key={i}>{value}</li>
+                  ))}
                 </ul>
               </div>
             </CharactericticsContainer>
@@ -59,7 +74,7 @@ const DevicePage = () => {
                 />
               </div>
             </StyledButtonContainer>
-            <StyledDescription>{oneDevice.description}</StyledDescription>
+            <StyledDescription>{selectLangDescriprion}</StyledDescription>
           </ProductWrapper>
         )}
       </ProductContainer>

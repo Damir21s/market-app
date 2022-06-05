@@ -1,10 +1,10 @@
 export interface IDevice {
-  characteristics: ICharacterstics;
+  characteristics: Array<Object>;
   id: number;
   name: string;
   price: number;
   img: string;
-  description: string;
+  description: Array<string>;
 }
 
 export interface ResponseDevices {
@@ -13,19 +13,6 @@ export interface ResponseDevices {
 }
 
 export interface ResponseOneDevice extends IDevice {}
-
-export interface ICharacterstics {
-  CPU: string;
-  RAM: string;
-  SIM_cards: string;
-  battery: string;
-  communication_standard: string;
-  internal_memory: string;
-  operating_system: string;
-  screen: string;
-  weight: string;
-  сamera: string;
-}
 
 export interface ResponseNewDevices {
   data: INewDevices[];

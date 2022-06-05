@@ -1,4 +1,3 @@
-import { CharacteristicsEntity } from 'src/characteristics/entities/characteristic.entity';
 import { TypeEntity } from 'src/type/entities/type.entity';
 import {
   Entity,
@@ -6,7 +5,6 @@ import {
   PrimaryGeneratedColumn,
   ManyToOne,
   JoinColumn,
-  OneToOne,
 } from 'typeorm';
 
 @Entity('devices')
@@ -20,8 +18,8 @@ export class DeviceEntity {
   @Column()
   img: string;
 
-  @Column({ nullable: true })
-  description: string;
+  @Column({ nullable: true, type: 'json' })
+  description: Array<string>;
 
   @Column()
   price: number;
@@ -30,7 +28,10 @@ export class DeviceEntity {
   @JoinColumn({ name: 'typeId' })
   typeId: TypeEntity;
 
-  @OneToOne(() => CharacteristicsEntity)
-  @JoinColumn({ name: 'characteristics' })
-  characteristics: CharacteristicsEntity;
+  // @OneToOne(() => CharacteristicsEntity)
+  // @JoinColumn({ name: 'characteristics' })
+  // characteristics: CharacteristicsEntity;
+
+  @Column({ nullable: true, type: 'json' })
+  characteristics: Array<Object>;
 }

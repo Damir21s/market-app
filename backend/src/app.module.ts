@@ -13,8 +13,6 @@ import { DeviceModule } from './device/device.module';
 import { DeviceEntity } from './device/entities/device.entity';
 import { TheBestModule } from './the_best/the_best.module';
 import { NewModule } from './new/new.module';
-import { CharacteristicsEntity } from './characteristics/entities/characteristic.entity';
-import { CharacteristicsModule } from './characteristics/characteristics.module';
 import { OrdersModule } from './orders/orders.module';
 import { OrderEntity } from './orders/entities/order.entity';
 
@@ -33,7 +31,6 @@ import { OrderEntity } from './orders/entities/order.entity';
         UserEntity,
         TypeEntity,
         DeviceEntity,
-        CharacteristicsEntity,
         TheBestEntity,
         NewEntity,
         OrderEntity,
@@ -44,7 +41,6 @@ import { OrderEntity } from './orders/entities/order.entity';
     AuthModule,
     TypeModule,
     DeviceModule,
-    CharacteristicsModule,
     TheBestModule,
     NewModule,
     OrdersModule,

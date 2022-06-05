@@ -1,9 +1,10 @@
 import SearchIcon from "@mui/icons-material/Search";
-import { ChangeEvent, useEffect, useState } from "react";
+import { ChangeEvent, useContext, useEffect, useState } from "react";
 import { useAppDispatch } from "hooks/redux";
 import { getDevices } from "store/products/product.actions";
 import { useDebounce } from "hooks/debounce";
 import { SearchContainer, SearchIconWrapper, StyledInputBase } from "./style";
+import { LanguageContext } from "App";
 
 interface SearchProps {
   typeId: string;
@@ -11,6 +12,8 @@ interface SearchProps {
 
 const Search: React.FC<SearchProps> = ({ typeId }) => {
   const dispatch = useAppDispatch();
+
+  const { currentLanguage } = useContext(LanguageContext);
 
   const [value, setValue] = useState("");
 
@@ -32,7 +35,7 @@ const Search: React.FC<SearchProps> = ({ typeId }) => {
         <SearchIcon />
       </SearchIconWrapper>
       <StyledInputBase
-        placeholder="Search…"
+        placeholder={currentLanguage === "en-US" ? "Search..." : "Поиск..."}
         inputProps={{ "aria-label": "search" }}
         onChange={handleChange}
       />

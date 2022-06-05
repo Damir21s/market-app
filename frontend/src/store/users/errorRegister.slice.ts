@@ -5,11 +5,11 @@ interface ResponseMessageError {
   message: Array<string>;
 }
 
-interface ErrorRegisterState {
+interface ErrorState {
   error: Array<string> | null;
 }
 
-const initialState: ErrorRegisterState = {
+const initialState: ErrorState = {
   error: null,
 };
 

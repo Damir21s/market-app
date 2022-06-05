@@ -10,6 +10,7 @@ import ReservationProduct from "../ReserveProduct";
 import { FooterContainer, HeaderContainer, СartContainer } from "./style";
 import { clearCart } from "store/cart/cart.slice";
 import { DeviceApi } from "services/device.service";
+import { FormattedMessage } from "react-intl";
 
 const Basket = () => {
   const navigate = useNavigate();
@@ -73,7 +74,15 @@ const Basket = () => {
           <Fade {...TransitionProps} timeout={250}>
             <СartContainer>
               <HeaderContainer>
-                {cart.length ? <h2>Сart</h2> : <h2>Сart is empty</h2>}
+                {cart.length ? (
+                  <h2>
+                    <FormattedMessage id="cart" />
+                  </h2>
+                ) : (
+                  <h2>
+                    <FormattedMessage id="cart_empty" />
+                  </h2>
+                )}
                 <IconButton
                   onClick={() => setOpenCart(!openCart)}
                   style={{ position: "absolute", right: 0, margin: "5px 10px" }}
@@ -97,10 +106,16 @@ const Basket = () => {
                 : null}
               <FooterContainer>
                 <div>
-                  {cart.length ? <div>Total sum: {totalSum}$</div> : null}
+                  {cart.length ? (
+                    <div>
+                      <FormattedMessage id="total_sum" /> {totalSum}$
+                    </div>
+                  ) : null}
                   <div>
                     {cart.length ? (
-                      <StyledButton onClick={onReserve}>Reserve</StyledButton>
+                      <StyledButton onClick={onReserve}>
+                        <FormattedMessage id="reservation" />
+                      </StyledButton>
                     ) : (
                       <StyledButton
                         onClick={() => {
@@ -108,7 +123,7 @@ const Basket = () => {
                           navigate("/catalog");
                         }}
                       >
-                        Select product
+                        <FormattedMessage id="select_product" />
                       </StyledButton>
                     )}
                   </div>

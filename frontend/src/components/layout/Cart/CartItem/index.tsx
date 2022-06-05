@@ -1,5 +1,6 @@
 import { Images, Link, StyledButton } from "assets/styles/globals";
 import { useAppDispatch } from "hooks/redux";
+import { FormattedMessage } from "react-intl";
 import { removeItem } from "store/cart/cart.slice";
 import { ButtonsContainer, CartContainer } from "./style";
 
@@ -36,12 +37,14 @@ const CartItem: React.FC<CartItemProps> = ({
           <ButtonsContainer>
             <div>
               <Link to={`/device/${id}`}>
-                <StyledButton onClick={() => setOpen(false)}>more</StyledButton>
+                <StyledButton onClick={() => setOpen(false)}>
+                  <FormattedMessage id="more" />
+                </StyledButton>
               </Link>
             </div>
             <div>
               <StyledButton onClick={() => onRemoveItem()}>
-                remove from cart
+                <FormattedMessage id="remove" />
               </StyledButton>
             </div>
           </ButtonsContainer>

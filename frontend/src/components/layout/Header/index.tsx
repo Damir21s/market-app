@@ -15,11 +15,13 @@ import {
   LogoContainer,
 } from "./style";
 import { NavLink } from "react-router-dom";
+import SelectLanguage from "./SelectLanguage";
+import { FormattedMessage } from "react-intl";
 
 const pages = [
-  { id: 1, name: "catalog" },
-  { id: 2, name: "promotion" },
-  { id: 3, name: "news" },
+  { id: 1, name: [<FormattedMessage id="catalog" />, "catalog"] },
+  { id: 2, name: [<FormattedMessage id="promotion" />, "promotion"] },
+  { id: 3, name: [<FormattedMessage id="news" />, "news"] },
 ];
 
 const Header = () => {
@@ -52,8 +54,8 @@ const Header = () => {
             <List>
               {pages.map((page) => (
                 <li key={page.id}>
-                  <Link to={"/" + page.name}>
-                    <div>{page.name}</div>
+                  <Link to={"/" + page.name[1]}>
+                    <div>{page.name[0]}</div>
                   </Link>
                 </li>
               ))}
@@ -63,7 +65,7 @@ const Header = () => {
             <Basket />
             {user ? (
               <StyledButton bg="var(--transparent-default)" onClick={onLogout}>
-                Sign Out
+                <FormattedMessage id="sign_out" />
               </StyledButton>
             ) : (
               <div>
@@ -71,16 +73,17 @@ const Header = () => {
                   bg="var(--transparent-default)"
                   onClick={() => setOpenModalRegister(true)}
                 >
-                  Sign up
+                  <FormattedMessage id="sign_up" />
                 </StyledButton>
                 <StyledButton
                   bg="var(--transparent-default)"
                   onClick={() => setOpenModalLogin(true)}
                 >
-                  Sign in
+                  <FormattedMessage id="sign_in" />
                 </StyledButton>
               </div>
             )}
+            <SelectLanguage />
           </div>
         </FlexContainer>
         <Login openModal={openModalLogin} setOpenModal={setOpenModalLogin} />

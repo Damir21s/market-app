@@ -1,4 +1,5 @@
 import { Backdrop, CircularProgress } from "@mui/material";
+import { FormattedMessage } from "react-intl";
 
 interface PreloaderProps {
   isLoading: boolean;
@@ -22,7 +23,13 @@ const Preloader: React.FC<PreloaderProps> = ({
       >
         <CircularProgress color="inherit" />
       </Backdrop>
-      {error ? <h2>Ошибка...</h2> : children}
+      {error ? (
+        <h2>
+          <FormattedMessage id="error" />
+        </h2>
+      ) : (
+        children
+      )}
     </>
   );
 };

@@ -37,7 +37,7 @@ export class AuthService {
   }
   async register(dto: CreateUserDto) {
     try {
-      // здесь мы указываем какие конкретно свойста мы хотим получить с фронтенда,
+      // здесь мы указываем какие конкретно свойста хотим получить с фронтенда,
       // и какие данные скажем сохранить бэкенду
       const { password, ...userData } = await this.userService.create({
         email: dto.email,

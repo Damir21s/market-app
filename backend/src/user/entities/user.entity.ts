@@ -15,10 +15,7 @@ export class UserEntity {
   @Column()
   username: string;
 
-  @Column({
-    //только уникальные емаилы
-    unique: true,
-  })
+  @Column({ unique: true })
   email: string;
 
   @Column({ nullable: true })

@@ -1,3 +1,4 @@
+import { FormattedMessage } from "react-intl";
 import ModalWindow from "components/layout/ModalWindow";
 import { useAppSelector } from "hooks/redux";
 import { StyledContainer } from "./style";
@@ -18,16 +19,22 @@ const ReservationProduct: React.FC<ReservationProductProps> = ({
       {user ? (
         <ModalWindow setOpenModal={setOpenModal} openModal={openModal}>
           <StyledContainer>
-            <h2>Ваш заказ зарезервирован.</h2>
-            <h4>В ближайшее время с вами свяжется наш специалист.</h4>
+            <h2>
+              <FormattedMessage id="alert_reservation_title" />
+            </h2>
+            <h4>
+              <FormattedMessage id="alert_reservation_text" />
+            </h4>
           </StyledContainer>
         </ModalWindow>
       ) : (
         <ModalWindow setOpenModal={setOpenModal} openModal={openModal}>
           <StyledContainer>
-            <h2>Войдите или зарегистрируйтесь.</h2>
+            <h2>
+              <FormattedMessage id="alert_auth_title" />
+            </h2>
             <h4>
-              Для того чтобы сделать заказ необходимо быть авторизированным.
+              <FormattedMessage id="alert_auth_text" />
             </h4>
           </StyledContainer>
         </ModalWindow>

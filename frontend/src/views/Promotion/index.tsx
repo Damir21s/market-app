@@ -1,9 +1,12 @@
+import { FormattedMessage } from "react-intl";
 import { SectionContainer } from "views/MainPage/style";
 
 const PromotionPage = () => {
   return (
     <SectionContainer>
-      <h4>На этой странице пока ничего нет.</h4>
+      <h4>
+        <FormattedMessage id="empty_pages" />
+      </h4>
     </SectionContainer>
   );
 };

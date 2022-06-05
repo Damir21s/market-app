@@ -1,5 +1,6 @@
 import { StyledButton } from "assets/styles/globals";
 import { useAppDispatch, useAppSelector } from "hooks/redux";
+import { FormattedMessage } from "react-intl";
 import { addItem, removeItem } from "store/cart/cart.slice";
 
 interface ButtonProps {
@@ -28,9 +29,13 @@ const Button: React.FC<ButtonProps> = ({ img, name, price, id }) => {
   return (
     <>
       {isExistsInCart ? (
-        <StyledButton onClick={handleClick}>Remove from cart</StyledButton>
+        <StyledButton onClick={handleClick}>
+          <FormattedMessage id="remove" />
+        </StyledButton>
       ) : (
-        <StyledButton onClick={handleClick}>Add to cart</StyledButton>
+        <StyledButton onClick={handleClick}>
+          <FormattedMessage id="add" />
+        </StyledButton>
       )}
     </>
   );

@@ -1,4 +1,3 @@
-import { UserService } from 'src/user/user.service';
 import { LocalAuthGuard } from './guards/local-auth.guard';
 import {
   Controller,
@@ -31,7 +30,7 @@ export class AuthController {
     return this.authService.register(dto);
   }
 
-  // данный токен проверяет можно ли пользоваться странице profile или нет
+  // данный токен проверяет - можно ли пользоваться странице profile или нет
   @UseGuards(JwtAuthGuard)
   @Get('profile')
   getProfile(@Request() req) {

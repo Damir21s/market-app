@@ -15,7 +15,7 @@ export const errorLoginSlice = createSlice({
     },
     [loginUser.rejected.type]: (state, action: PayloadAction<string>) => {
       if (action.payload === "Unauthorized") {
-        state.error = "Неверный логин или пароль";
+        state.error = "Неверный логин или пароль | Wrong login or password";
       } else {
         state.error = action.payload;
       }

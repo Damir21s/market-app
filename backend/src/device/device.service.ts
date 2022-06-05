@@ -30,7 +30,7 @@ export class DeviceService {
 
   async findOne(id: number) {
     let queryBuilder = this.repository.findOne(id, {
-      relations: ['typeId', 'characteristics'],
+      relations: ['typeId'],
     });
     return queryBuilder;
   }

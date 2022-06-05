@@ -2,17 +2,22 @@ import { UserEntity } from './../entities/user.entity';
 import { IsEmail, Length } from 'class-validator';
 import { UniqueOnDatabase } from 'src/auth/validations/UniqueValidation';
 
-// в dto приходит вся инфромация с фронтенда
 export class CreateUserDto {
-  @Length(3, 32, { message: 'Имя должно быть не менее 3-х символов' })
+  @Length(3, 32, {
+    message:
+      'Имя должно быть не менее 3-х символов | Username must be at least 3 characters',
+  })
   username: string;
 
-  @IsEmail(undefined, { message: 'Неверная почта' })
+  @IsEmail(undefined, { message: 'Неверная почта|Invalid mail' })
   @UniqueOnDatabase(UserEntity, {
-    message: 'Такая почта уже существует',
+    message: 'Такая почта уже существует | This mail already exists.',
   })
   email: string;
 
-  @Length(6, 32, { message: 'Пароль должен быть не менее 6 символов' })
+  @Length(6, 32, {
+    message:
+      'Пароль должен быть не менее 6 символов | Password must be at least 6 characters',
+  })
   password?: string;
 }
